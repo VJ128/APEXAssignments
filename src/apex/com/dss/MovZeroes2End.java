@@ -24,6 +24,15 @@ for(int i=0;i<l;i++)
 //Sorting the ArrayList
 Collections.sort(al, new MyComp1());
 System.out.println("After moving all zeroes"+al);
+
+//3.sorting using Lambda
+int[] p={4,0,2,0,1};
+ArrayList<Integer> al1=new ArrayList<Integer>();
+for(int k=0;k<p.length;k++) {
+al1.add(p[k]);
+}
+al1.sort((o1,o2)->o2.compareTo(o1));
+System.out.println(al1);
 }
 }
 

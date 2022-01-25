@@ -23,3 +23,20 @@ public class AddUptoSpecificTarget {
 		}
 	}
 }
+/*
+ public class Test {
+	public static void main(String[] args) {
+		int[] a = { 24, 150, 80, 50, 88, 34 };
+		int target = 200;// o/p 150,50
+
+		for (int i = 0; i < a.length; i++) {
+			for (int j = i + 1; j < a.length - 1; j++) {
+				if (a[i] + a[j] == target) {
+					System.out.println(a[i] + " " + a[j]);
+				}
+			}
+		}
+	}
+}
+ */
+ 

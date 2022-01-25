@@ -8,6 +8,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Scanner;
+import java.util.Set;
 import java.util.Stack;
 public class MostRepeatedWordFromFile 
 {public static void main(String[] args) throws FileNotFoundException {
@@ -30,9 +31,12 @@ while(sc.hasNextLine())
 	  System.out.println(map);
 	//To find the most occuring word	
 	
-	  int maxval=0; String maxString =" "; for(Entry<String, Integer>
-	  data:map.entrySet()) { if(data.getValue()>maxval) { maxval=data.getValue();
-	  maxString=data.getKey(); map.put(maxString, maxval); } }
+	  int maxval=0; String maxString =" "; 
+	  for(Entry<String, Integer> data:map.entrySet()) 
+	  { if(data.getValue()>maxval) 
+	  { maxval=data.getValue();
+	  maxString=data.getKey();
+	  map.put(maxString, maxval); } }
 	  System.out.println("Most occuring word is '"+maxString+"' & it occured '"
 	  +maxval+"' times.");
 	 
@@ -46,10 +50,17 @@ Collections.sort(al, new Comparator<Entry<String,Integer>>() //Anonymous Class
 	}
 });
 System.out.println(al);
-/*//To find the most occuring word using Stack if we sort desc top record will hav maxval
+/*To find the most occuring word using Stck if we sort desc order of vals,top record will hav maxval
   Stack stack =new Stack(); stack.addAll(al);
   System.out.println("Most occuring word is :"+stack.peek()+" times.");*/
+ }}}
+/*
+ Set<Entry<String, Integer>> set = map.entrySet();
+		ArrayList<Entry<String, Integer>> al = new ArrayList<Entry<String, Integer>>(set);
+		al.sort((o1, o2) -> o1.getValue().compareTo(o2.getValue()));
+		Stack<Entry<String, Integer>> st = new Stack<Entry<String, Integer>>();
+		st.addAll(al);
+		System.out.println(st.peek()); 
+  
+  */
  
-}
-}
-}

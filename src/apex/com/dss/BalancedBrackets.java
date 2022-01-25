@@ -5,7 +5,7 @@ import java.util.Stack;
 public class BalancedBrackets  
 {	public static void main(String[] args) 
 {
-	String str="[({})]]]";
+	String str="}[";
 	char[] ch=str.toCharArray();int l=ch.length;
 	Stack<Character> st=new Stack<Character>();
 //Iterating thru char array and pushing only open brackets into the stack for the brackets

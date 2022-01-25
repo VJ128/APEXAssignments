@@ -62,6 +62,7 @@ public class MostRepeatedCharInString {
 		}
 		ArrayList<Entry<Character, Integer>> al = new ArrayList<Entry<Character, Integer>>(set);
 		// Collections.sort(al,(o1,o2)->o2.getValue().compareTo(o1.getValue()));//Sorting
+		// al.sort((o1,o2)->o2.getValue().compareTo(o1.getValue()));//Sorting
 		// using Lambdaexp
 
 		/*
@@ -73,6 +74,14 @@ public class MostRepeatedCharInString {
 		Collections.sort(al, new MyComp());// Sorting using customized comparator
 		// al.sort(new MyComp());Sorting using customized comparator
 		System.out.println(al);
+
+		/*
+		 * Set<Entry<Character, Integer>> set = map.entrySet();
+		 * ArrayList<Entry<Character, Integer>> al = new ArrayList<Entry<Character,
+		 * Integer>>(set); al.sort((o1,o2)->o1.getValue().compareTo(o2.getValue()));
+		 * st.addAll(al); System.out.println(st.peek());
+		 */
+
 	}
 }
 

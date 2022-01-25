@@ -10,7 +10,10 @@ public static void main(String[] args) {
 	{
 		if(!map.containsKey(ch[i]))
 		{map.put(ch[i], 1);}
-		else {i=i-1;map.clear();}
+		else
+		   {i=i-1;
+			map.clear();
+			}
 		if(map.size()>maxval) 
 		{
 			maxval=map.size();maxString=map.keySet().toString();
